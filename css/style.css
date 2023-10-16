@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: hsl(217, 54%, 11%);
+    
+}
+
+.card {
+    width:350px;
+    background-color: hsl(216, 50%, 16%);
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    padding: 20px;
+}
+.card .image {
+    width: 310px;
+    height: 310px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.card .image img{
+    max-width: 100%;
+    border-radius: 10px;
+    
+    position: relative;
+}
+.card .image::before{
+    font-family: "Font Awesome 5 Free";
+    content:"\f06e";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: hsl(0, 0%, 100%);
+    opacity: 0;
+    width: 310px;
+    height: 310px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: hsl(178deg 100% 50% / 55%);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.card .image:hover::before{
+    opacity: 1;
+}
+
+.card .card-header {
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.card .card-header:hover{
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+.card .card-header h1 {
+    font-size: 25px;
+}
+.card .card-header >span {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card p {
+    color:  hsl(215, 51%, 70%);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card .ETH {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    font-size: 16px;
+    font-weight: 400;
+}
+.card .ETH > div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.card .ETH .one{
+    color: hsl(178, 100%, 50%);
+}
+.card .ETH .two {
+    color: hsl(215, 51%, 70%);
+}
+
+.card .card-footer {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.card .card-footer img{
+    width: 40px;
+    outline: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card .card-footer span{
+    color: hsl(215, 51%, 70%);;
+}
+.card .card-footer span:last-child{
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.card .card-footer span:last-child:hover {
+    color: hsl(178, 100%, 50%);
+}
